@@ -183,30 +183,38 @@ export default function QuizScreen({ questions, isReviewMode, onAnswer, onFinish
         <div className="progress-fill" style={{ width: `${progress}%` }} />
       </div>
 
-      <div className="question-card slide-up" key={question.id}>
-        <div className="question-type-badge">
-          <span className="badge">{TYPE_LABEL[question.type]}</span>
+      {/* A single keyed wrapper per question. Changing the key on question
+          change forces React to fully unmount the previous question's UI and
+          mount the new one — which replays the entrance animation and resets
+          MultiOptions' internal state. Using ONE key here (instead of keys on
+          both the card and MultiOptions) avoids duplicate sibling keys, which
+          previously left old multi-select cards stuck on screen. */}
+      <div key={question.id}>
+        <div className="question-card slide-up">
+          <div className="question-type-badge">
+            <span className="badge">{TYPE_LABEL[question.type]}</span>
+          </div>
+          <p className="question-text">{question.text}</p>
         </div>
-        <p className="question-text">{question.text}</p>
+
+        {question.type === 'multiple_choice' && (
+          <MCOptions question={question} onAnswer={handleAnswer} submitted={submitted} givenAnswer={givenAnswer} />
+        )}
+        {question.type === 'true_false' && (
+          <TFOptions question={question} onAnswer={handleAnswer} submitted={submitted} givenAnswer={givenAnswer} />
+        )}
+        {question.type === 'multi_select' && (
+          <MultiOptions question={question} onAnswer={handleAnswer} submitted={submitted} givenAnswer={givenAnswer} />
+        )}
+
+        {submitted && <Feedback correct={correct} question={question} />}
+
+        {submitted && (
+          <button className={`btn slide-up ${correct ? 'btn-success' : 'btn-primary'}`} onClick={handleNext}>
+            {idx < questions.length - 1 ? 'Întrebarea următoare →' : 'Vezi rezultatele'}
+          </button>
+        )}
       </div>
-
-      {question.type === 'multiple_choice' && (
-        <MCOptions question={question} onAnswer={handleAnswer} submitted={submitted} givenAnswer={givenAnswer} />
-      )}
-      {question.type === 'true_false' && (
-        <TFOptions question={question} onAnswer={handleAnswer} submitted={submitted} givenAnswer={givenAnswer} />
-      )}
-      {question.type === 'multi_select' && (
-        <MultiOptions key={question.id} question={question} onAnswer={handleAnswer} submitted={submitted} givenAnswer={givenAnswer} />
-      )}
-
-      {submitted && <Feedback correct={correct} question={question} />}
-
-      {submitted && (
-        <button className={`btn slide-up ${correct ? 'btn-success' : 'btn-primary'}`} onClick={handleNext}>
-          {idx < questions.length - 1 ? 'Întrebarea următoare →' : 'Vezi rezultatele'}
-        </button>
-      )}
     </div>
   )
 }
