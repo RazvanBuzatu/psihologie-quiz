@@ -17,8 +17,22 @@
     <script type="module" src="/src/main.jsx"></script>
     <script>
       if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js').catch(() => {})
+        // When a newer service worker takes control, reload once to load the
+        // new version. Guarded so it never loops and never fires on the very
+        // first install. NOTE: progress lives in localStorage, which a reload
+        // (or any cache change) never clears — so updates never lose progress.
+        var hadController = !!navigator.serviceWorker.controller
+        var refreshing = false
+        navigator.serviceWorker.addEventListener('controllerchange', function () {
+          if (refreshing || !hadController) return
+          refreshing = true
+          window.location.reload()
+        })
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js').then(function (reg) {
+            // Proactively check for a new version each time the app opens.
+            reg.update()
+          }).catch(function () {})
         })
       }
     </script>

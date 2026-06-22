@@ -254,7 +254,7 @@
       "options": [
         {
           "letter": "a",
-          "text": "probabilist, dinamic – evolutiv;"
+          "text": "probabilist, dinamic – evolutiv"
         },
         {
           "letter": "b",
@@ -1582,20 +1582,8 @@
       "chapter": 1,
       "number": 78,
       "type": "multiple_choice",
-      "text": "Comunicarea este concepută:",
+      "text": "Comunicarea este concepută:\n\nOpțiuni:\na) ca un fenomen social, prin care se transmit trebuințe sau imbolduri spre acțiune\nb) ca un “element cheie” în definirea, înţelegerea şi explicarea individului şi, prin extensie, a societății\nc) ca un “schimb de semnificații” 79.Senzațiile proprioceptive informează despre:",
       "options": [
-        {
-          "letter": "a",
-          "text": "ca un fenomen social, prin care se transmit trebuințe sau imbolduri spre acțiune"
-        },
-        {
-          "letter": "b",
-          "text": "ca un “element cheie” în definirea, înţelegerea şi explicarea individului şi, prin extensie, a societății"
-        },
-        {
-          "letter": "c",
-          "text": "ca un “schimb de semnificații” 79.Senzațiile proprioceptive informează despre:"
-        },
         {
           "letter": "a",
           "text": "Funcționarea organelor interne"
@@ -5834,7 +5822,7 @@
       "options": [
         {
           "letter": "a",
-          "text": "Îmbunătățirii rezultatelor copiilor la aceeași sarcină pe măsura înaintării in vârstă;"
+          "text": "Îmbunătățirii rezultatelor copiilor la aceeași sarcină pe măsura înaintării in vârstă"
         },
         {
           "letter": "b",
@@ -5931,11 +5919,11 @@
       "options": [
         {
           "letter": "a",
-          "text": "Rezultatele obținute de subiecți la aceeași sarcină sunt mai bune pe măsura înaintării in vârstă;"
+          "text": "Rezultatele obținute de subiecți la aceeași sarcină sunt mai bune pe măsura înaintării in vârstă"
         },
         {
           "letter": "b",
-          "text": "Presupune capacitatea de adaptare la situații noi si de rezolvare de probleme;"
+          "text": "Presupune capacitatea de adaptare la situații noi si de rezolvare de probleme"
         },
         {
           "letter": "c",
@@ -8906,11 +8894,11 @@
       "options": [
         {
           "letter": "a",
-          "text": "directe;"
+          "text": "directe"
         },
         {
           "letter": "b",
-          "text": "indirecte;"
+          "text": "indirecte"
         },
         {
           "letter": "c",
@@ -8932,7 +8920,7 @@
       "options": [
         {
           "letter": "a",
-          "text": "comportamentului observabil;"
+          "text": "comportamentului observabil"
         },
         {
           "letter": "b",
@@ -9053,11 +9041,11 @@
       "options": [
         {
           "letter": "a",
-          "text": "rolul înnăscutului in determinarea diferențelor psihologice dintre oameni;"
+          "text": "rolul înnăscutului in determinarea diferențelor psihologice dintre oameni"
         },
         {
           "letter": "b",
-          "text": "rolul înnăscutului in determinarea asemănărilor psihologice dintre oameni;"
+          "text": "rolul înnăscutului in determinarea asemănărilor psihologice dintre oameni"
         },
         {
           "letter": "c",
@@ -9075,7 +9063,7 @@
       "options": [
         {
           "letter": "a",
-          "text": "modelul factorial al personalității;"
+          "text": "modelul factorial al personalității"
         },
         {
           "letter": "b",
@@ -9372,7 +9360,7 @@
         },
         {
           "letter": "b",
-          "text": "8 trăsături sursă și 8 factori secundari;"
+          "text": "8 trăsături sursă și 8 factori secundari"
         },
         {
           "letter": "c",
@@ -10090,7 +10078,15 @@
       "options": [
         {
           "letter": "a",
-          "text": "introversiunii ; b. extraversiunii ; c. nevrozismului"
+          "text": "introversiunii"
+        },
+        {
+          "letter": "b",
+          "text": "extraversiunii"
+        },
+        {
+          "letter": "c",
+          "text": "nevrozismului"
         }
       ],
       "answer": "b"
@@ -11222,7 +11218,7 @@
       "options": [
         {
           "letter": "a",
-          "text": "Testul arborelui;"
+          "text": "Testul arborelui"
         },
         {
           "letter": "b",
@@ -13579,7 +13575,7 @@
       "chapter": 4,
       "number": 94,
       "type": "multiple_choice",
-      "text": "Apar ca dezavantaje ale interviului:\n\nOpțiuni:\na) cost ridicat\nb) număr mare de răspunsuri\nc) răspunsuri greu de structurat\nd) asigurarea anonimatului\ne) sunt cunoscute datele personale ale intervievatului\ne) ac+d",
+      "text": "Apar ca dezavantaje ale interviului:\n\nOpțiuni:\na) cost ridicat\nb) număr mare de răspunsuri\nc) răspunsuri greu de structurat\nd) asigurarea anonimatului\ne) sunt cunoscute datele personale ale intervievatului",
       "options": [
         {
           "letter": "a",
@@ -13596,6 +13592,10 @@
         {
           "letter": "d",
           "text": "c+d+e"
+        },
+        {
+          "letter": "e",
+          "text": "ac+d"
         }
       ],
       "answer": "c"
@@ -14865,7 +14865,7 @@
       "chapter": 4,
       "number": 137,
       "type": "multiple_choice",
-      "text": "Ipoteza alternativă poate fi:\n\nOpțiuni:\na) direcțională\nb) non direcțională\nc) omisă\nd) o variabilă\ne) o teorie\ne) ac+e",
+      "text": "Ipoteza alternativă poate fi:\n\nOpțiuni:\na) direcțională\nb) non direcțională\nc) omisă\nd) o variabilă\ne) o teorie",
       "options": [
         {
           "letter": "a",
@@ -14882,6 +14882,10 @@
         {
           "letter": "d",
           "text": "b+d+e"
+        },
+        {
+          "letter": "e",
+          "text": "ac+e"
         }
       ],
       "answer": "a"
@@ -15071,7 +15075,7 @@
       "chapter": 4,
       "number": 144,
       "type": "multiple_choice",
-      "text": "Dezavantajele principale ale metodei observației:\n\nOpțiuni:\na) nu poate pătrunde în profunzimea unor comportamente intime;\nb) inegalitatea distributivității atenției cercetătorului pe toată durata observației\nc) nu se pot identifica relații cauzale pentru determinarea comportamentelor grupurilor mari\nd) interpretarea greșită a informațiilor furnizate de comportamentul nonverbal\ne) focalizarea atenției pe anumite detalii in detrimentul altora",
+      "text": "Dezavantajele principale ale metodei observației:\n\nOpțiuni:\na) nu poate pătrunde în profunzimea unor comportamente intime\nb) inegalitatea distributivității atenției cercetătorului pe toată durata observației\nc) nu se pot identifica relații cauzale pentru determinarea comportamentelor grupurilor mari\nd) interpretarea greșită a informațiilor furnizate de comportamentul nonverbal\ne) focalizarea atenției pe anumite detalii in detrimentul altora",
       "options": [
         {
           "letter": "a",
@@ -16245,7 +16249,11 @@
       "options": [
         {
           "letter": "a",
-          "text": "colectiv b. individual"
+          "text": "colectiv"
+        },
+        {
+          "letter": "b",
+          "text": "individual"
         }
       ],
       "answer": "b"
@@ -17319,19 +17327,19 @@
       "chapter": 5,
       "number": 32,
       "type": "multiple_choice",
-      "text": "Abordarea unui domeniu printr-un sistem de metode specifice se referă la:\n1. cerința epistemologică\n2. cerinţa gnoseologică\n3. cerința praxiologică.",
+      "text": "Abordarea unui domeniu printr-un sistem de metode specifice se referă la:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "cerința epistemologică"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "cerinţa gnoseologică"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "cerința praxiologică"
         }
       ],
       "answer": "b"
@@ -17341,19 +17349,19 @@
       "chapter": 5,
       "number": 33,
       "type": "multiple_choice",
-      "text": "Formularea în legătură cu domeniul problematic a unor concepte, principii şi legi, care pe fondul legilor generale să surprindă aspectele specifice vârstelor la care se referă inseamnă:\n1. cerința epistemologică\n2. cerința gnoseologică\n3. cerința praxiologică.",
+      "text": "Formularea în legătură cu domeniul problematic a unor concepte, principii şi legi, care pe fondul legilor generale să surprindă aspectele specifice vârstelor la care se referă inseamnă:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "cerința epistemologică"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "cerința gnoseologică"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "cerința praxiologică"
         }
       ],
       "answer": "a"
@@ -17363,15 +17371,15 @@
       "chapter": 5,
       "number": 34,
       "type": "multiple_choice",
-      "text": "Cele mai importante contribuţii la psihologia dezvoltării le-au adus cercetătorii în domeniul psihologiei copilului:\n1. H. Wallon, E. Fischbein, S. Freud, C. Rogers\n2. E. Claparede, A. Gessel, Ch. Buhler, J.Piaget.",
+      "text": "Cele mai importante contribuţii la psihologia dezvoltării le-au adus cercetătorii în domeniul psihologiei copilului:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "H. Wallon, E. Fischbein, S. Freud, C. Rogers"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "E. Claparede, A. Gessel, Ch. Buhler, J.Piaget"
         }
       ],
       "answer": "b"
@@ -17381,19 +17389,19 @@
       "chapter": 5,
       "number": 35,
       "type": "multiple_choice",
-      "text": "Intre paradigmele stadialității, în paradigme formulate de psihologia genetică a lui Piaget cu privire la stadialitate, se admite ideea că:\n1. stadialitatea e logică\n2. succesiunea stadiilor este obligatorie\n3. extinderea stadiilor este constantă.",
+      "text": "Intre paradigmele stadialității, în paradigme formulate de psihologia genetică a lui Piaget cu privire la stadialitate, se admite ideea că:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "stadialitatea e logică"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "succesiunea stadiilor este obligatorie"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "extinderea stadiilor este constantă"
         }
       ],
       "answer": "b"
@@ -17425,19 +17433,19 @@
       "chapter": 5,
       "number": 37,
       "type": "multiple_choice",
-      "text": "Diagnoza este nivelul:\n1. posibil până la care va evalua pe termen scurt o persoană\n2. posibil până la care va evalua pe termen mediu o persoană\n3. la care se găsește în momentul dat o calitate psihică.",
+      "text": "Diagnoza este nivelul:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "posibil până la care va evalua pe termen scurt o persoană"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "posibil până la care va evalua pe termen mediu o persoană"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "la care se găsește în momentul dat o calitate psihică"
         }
       ],
       "answer": "c"
@@ -17601,23 +17609,23 @@
       "chapter": 5,
       "number": 45,
       "type": "multiple_choice",
-      "text": "Cuvântul care lipsește din definiția “Ereditatea este acea însușire fundamentală a materiei vii de a transmite de la o generație la alta ..........de specificitate ale speciei sub forma codului genetic.\n1. comportamentul\n2. aptitudinile\n3. mesajul\n4. potențialul.",
+      "text": "Cuvântul care lipsește din definiția “Ereditatea este acea însușire fundamentală a materiei vii de a transmite de la o generație la alta ..........de specificitate ale speciei sub forma codului genetic.",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "comportamentul"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "aptitudinile"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "mesajul"
         },
         {
           "letter": "d",
-          "text": "4"
+          "text": "potențialul"
         }
       ],
       "answer": "c"
@@ -17653,19 +17661,19 @@
       "chapter": 5,
       "number": 47,
       "type": "multiple_choice",
-      "text": "Completati spațiul rămas liber din textul următor cu “ Ereditatea este un dat care se exprimă .......în momente de vârstă sau rămâne latent toată viața în absența factorului activator.\n1. prin unicitate\n2. diferit\n3. printr-o aptitudine.",
+      "text": "Completati spațiul rămas liber din textul următor cu “ Ereditatea este un dat care se exprimă .......în momente de vârstă sau rămâne latent toată viața în absența factorului activator.",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "prin unicitate"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "diferit"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "printr-o aptitudine"
         }
       ],
       "answer": "b"
@@ -18011,11 +18019,15 @@
       "chapter": 5,
       "number": 62,
       "type": "multiple_choice",
-      "text": "Senzațiile gustative ale nou născutului determină reacții la gusturile fundamentale diferite de reacțiile adultului și anume:\n1. o sensibilitate slabă la dulce și acru şi mărită la sărat şi amar\n2. o sensibilitate mărită la dulce si acru și slabă la sărat si amar",
+      "text": "Senzațiile gustative ale nou născutului determină reacții la gusturile fundamentale diferite de reacțiile adultului și anume:",
       "options": [
         {
           "letter": "a",
-          "text": "1. o sensibilitate slabă la dulce si acru şi mărită la sărat şi amar"
+          "text": "o sensibilitate slabă la dulce și acru şi mărită la sărat şi amar"
+        },
+        {
+          "letter": "b",
+          "text": "o sensibilitate mărită la dulce si acru și slabă la sărat si amar"
         }
       ],
       "answer": "b"
@@ -18025,19 +18037,19 @@
       "chapter": 5,
       "number": 63,
       "type": "multiple_choice",
-      "text": "Senzațiile tactile ale nou născutului sunt neuniforme in diferite zone:\n1. mai mare pe spate si coapse\n2. mai mică in palme si talpi\n3. mai mare in obraji si pleoape",
+      "text": "Senzațiile tactile ale nou născutului sunt neuniforme in diferite zone:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "mai mare pe spate si coapse"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "mai mică in palme si talpi"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "mai mare in obraji si pleoape"
         }
       ],
       "answer": "c"
@@ -18171,15 +18183,15 @@
       "chapter": 5,
       "number": 70,
       "type": "multiple_choice",
-      "text": "Curiozitatea bazată pe reflexul de orientare, care este un indice al inteligenței trebuie intotdeauna satisfăcută?\n1. da, trebuie satisfacută\n2. nu trebuie satisfacută",
+      "text": "Curiozitatea bazată pe reflexul de orientare, care este un indice al inteligenței trebuie intotdeauna satisfăcută?",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "da, trebuie satisfacută"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "nu trebuie satisfacută"
         }
       ],
       "answer": "a"
@@ -18215,15 +18227,15 @@
       "chapter": 5,
       "number": 72,
       "type": "multiple_choice",
-      "text": "Primele mișcări sunt ale:\n1. capului şi gâtului\n2. spatelui si degetelor",
+      "text": "Primele mișcări sunt ale:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "capului şi gâtului"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "spatelui si degetelor"
         }
       ],
       "answer": "a"
@@ -18447,19 +18459,19 @@
       "chapter": 5,
       "number": 82,
       "type": "multiple_choice",
-      "text": "Etapa inteligenţei senzorio-motorii definită de J. Piaget se desfășoară in intervalul:\n1. 0-2 ani\n2. 1-3 ani\n3. 3-6/7 ani",
+      "text": "Etapa inteligenţei senzorio-motorii definită de J. Piaget se desfășoară in intervalul:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "0-2 ani"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "1-3 ani"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "3-6/7 ani"
         }
       ],
       "answer": "a"
@@ -18469,15 +18481,15 @@
       "chapter": 5,
       "number": 83,
       "type": "multiple_choice",
-      "text": "Cum comunică copilul cu adultul intre 1 si 3 ani?\n1. comunică cu plăcere\n2. nu comunică cu plăcere",
+      "text": "Cum comunică copilul cu adultul intre 1 si 3 ani?",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "comunică cu plăcere"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "nu comunică cu plăcere"
         }
       ],
       "answer": "a"
@@ -18565,15 +18577,15 @@
       "chapter": 5,
       "number": 87,
       "type": "multiple_choice",
-      "text": "Durata concentrării la 3 ani este :\n1. de 15 minute\n2. de 45 minute",
+      "text": "Durata concentrării la 3 ani este :",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "de 15 minute"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "de 45 minute"
         }
       ],
       "answer": "a"
@@ -18583,15 +18595,15 @@
       "chapter": 5,
       "number": 88,
       "type": "multiple_choice",
-      "text": "Bâlbâiala este destul de frecventă intre:\n1. patru si cinci ani,\n2. doi si trei ani.",
+      "text": "Bâlbâiala este destul de frecventă intre:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "patru si cinci ani,"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "doi si trei ani"
         }
       ],
       "answer": "b"
@@ -18623,15 +18635,15 @@
       "chapter": 5,
       "number": 90,
       "type": "multiple_choice",
-      "text": "Intre 0 si 2 ani activitatea copilului este controlată dominant de:\n1. Emisfera cerebrală stângă\n2. Emisfera cerebrală dreaptă",
+      "text": "Intre 0 si 2 ani activitatea copilului este controlată dominant de:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "Emisfera cerebrală stângă"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "Emisfera cerebrală dreaptă"
         }
       ],
       "answer": "b"
@@ -18641,19 +18653,19 @@
       "chapter": 5,
       "number": 91,
       "type": "multiple_choice",
-      "text": "Când recunoaște copilul prozodia specifică limbii lui:\n1. 3-4 luni\n2. 6-8 luni\n3. primele zile dupa naștere",
+      "text": "Când recunoaște copilul prozodia specifică limbii lui:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "3-4 luni"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "6-8 luni"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "primele zile dupa naștere"
         }
       ],
       "answer": "c"
@@ -18663,19 +18675,19 @@
       "chapter": 5,
       "number": 92,
       "type": "multiple_choice",
-      "text": "Cine este adeptul ideii “ontogeneza repetă filogeneza”:\n1. Stanley Hall\n2. J. Piaget\n3. G. Jung",
+      "text": "Cine este adeptul ideii “ontogeneza repetă filogeneza”:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "Stanley Hall"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "J. Piaget"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "G. Jung"
         }
       ],
       "answer": "a"
@@ -18685,23 +18697,23 @@
       "chapter": 5,
       "number": 93,
       "type": "multiple_choice",
-      "text": "Stadiul senzorimotor se organizează in:\n1. trei substadii\n2. in cinci substadii\n3. in șase substadii\n4. in patru substadii",
+      "text": "Stadiul senzorimotor se organizează in:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "trei substadii"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "in cinci substadii"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "in șase substadii"
         },
         {
           "letter": "d",
-          "text": "4"
+          "text": "in patru substadii"
         }
       ],
       "answer": "c"
@@ -18729,23 +18741,23 @@
       "chapter": 5,
       "number": 95,
       "type": "multiple_choice",
-      "text": "Reactiile circulare secundare coordonate apar intre:\n1. 4 si 5 luni\n2. 7 si 8 luni\n3. 9 si 12 luni\n4. 12 si 18 luni",
+      "text": "Reactiile circulare secundare coordonate apar intre:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "4 si 5 luni"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "7 si 8 luni"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "9 si 12 luni"
         },
         {
           "letter": "d",
-          "text": "4"
+          "text": "12 si 18 luni"
         }
       ],
       "answer": "c"
@@ -18755,19 +18767,19 @@
       "chapter": 5,
       "number": 96,
       "type": "multiple_choice",
-      "text": "Printre reflexele înnăscute ce au intrat in atenția lui Piaget au fost:\n1. reflexul suptului, reflexul mersului\n2. reflexul căutării, reflexul apucatului\n3. reflexul suptului, reflexul apucatului",
+      "text": "Printre reflexele înnăscute ce au intrat in atenția lui Piaget au fost:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "reflexul suptului, reflexul mersului"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "reflexul căutării, reflexul apucatului"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "reflexul suptului, reflexul apucatului"
         }
       ],
       "answer": "c"
@@ -18777,19 +18789,19 @@
       "chapter": 5,
       "number": 97,
       "type": "multiple_choice",
-      "text": "La sfârșitul primului an de viață gândirea copilului este dominată in totalitate de:\n1. realism\n2. acțiunea concretă cu obiectele\n3. operații logico matematice",
+      "text": "La sfârșitul primului an de viață gândirea copilului este dominată in totalitate de:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "realism"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "acțiunea concretă cu obiectele"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "operații logico matematice"
         }
       ],
       "answer": "b"
@@ -18799,19 +18811,19 @@
       "chapter": 5,
       "number": 98,
       "type": "multiple_choice",
-      "text": "Jocul simbolic este o caracteristică a copilului de la:\n1. 2 la 4 ani\n2. 5 la 6 ani\n3. 7 la 10 ani",
+      "text": "Jocul simbolic este o caracteristică a copilului de la:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "2 la 4 ani"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "5 la 6 ani"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "7 la 10 ani"
         }
       ],
       "answer": "a"
@@ -18821,19 +18833,19 @@
       "chapter": 5,
       "number": 99,
       "type": "multiple_choice",
-      "text": "Stadiul senzorimotor se incheie in jurul vârstei de :\n1. 1 an\n2. 2 ani\n3. 3 ani",
+      "text": "Stadiul senzorimotor se incheie in jurul vârstei de :",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "1 an"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "2 ani"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "3 ani"
         }
       ],
       "answer": "b"
@@ -18843,15 +18855,15 @@
       "chapter": 5,
       "number": 100,
       "type": "multiple_choice",
-      "text": "Conform teoriei lui Piaget, noțiunea de obiect:\n1. este înnăscută\n2. se formează",
+      "text": "Conform teoriei lui Piaget, noțiunea de obiect:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "este înnăscută"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "se formează"
         }
       ],
       "answer": "b"
@@ -18887,19 +18899,19 @@
       "chapter": 5,
       "number": 102,
       "type": "multiple_choice",
-      "text": "Reactiile circulare terțiare apar intre vârstele de:\n1. 3 si 4 luni\n2. 9 si 12 luni\n3. 12 si 18 luni",
+      "text": "Reactiile circulare terțiare apar intre vârstele de:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "3 si 4 luni"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "9 si 12 luni"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "12 si 18 luni"
         }
       ],
       "answer": "c"
@@ -18909,15 +18921,15 @@
       "chapter": 5,
       "number": 103,
       "type": "multiple_choice",
-      "text": "Scopul părintelui autoritar este:\n1. obţinerea unei supuneri stricte\n2. să protejeze adolescentul de riscul dezaprobării celorlalţi",
+      "text": "Scopul părintelui autoritar este:",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "obţinerea unei supuneri stricte"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "să protejeze adolescentul de riscul dezaprobării celorlalţi"
         }
       ],
       "answer": "a"
@@ -18993,19 +19005,19 @@
       "chapter": 5,
       "number": 107,
       "type": "multiple_choice",
-      "text": "Ce reflex se manifestă la un zgomot puternic sau la o miscare neașteptată de lăsare a copilului să cadă câțiva centrimetri in timp ce este ținut in brațe?\n1. reflexul de bază\n2. reflexul Moro\n3. reflexul Babinski",
+      "text": "Ce reflex se manifestă la un zgomot puternic sau la o miscare neașteptată de lăsare a copilului să cadă câțiva centrimetri in timp ce este ținut in brațe?",
       "options": [
         {
           "letter": "a",
-          "text": "1"
+          "text": "reflexul de bază"
         },
         {
           "letter": "b",
-          "text": "2"
+          "text": "reflexul Moro"
         },
         {
           "letter": "c",
-          "text": "3"
+          "text": "reflexul Babinski"
         }
       ],
       "answer": "b"
@@ -20649,8 +20661,24 @@
       "chapter": 5,
       "number": 181,
       "type": "multiple_choice",
-      "text": "Creierul este un organ social care se dezvoltă si funcționează in interacțiune cu:\n\nOpțiuni:\na) aria vizuală\nb) frecvența achiziților\nc) alte creiere\nd) aria motorie",
+      "text": "Creierul este un organ social care se dezvoltă si funcționează in interacțiune cu:",
       "options": [
+        {
+          "letter": "a",
+          "text": "aria vizuală"
+        },
+        {
+          "letter": "b",
+          "text": "frecvența achiziților"
+        },
+        {
+          "letter": "c",
+          "text": "alte creiere"
+        },
+        {
+          "letter": "d",
+          "text": "aria motorie"
+        },
         {
           "letter": "e",
           "text": "a+d"
@@ -20685,16 +20713,8 @@
       "chapter": 5,
       "number": 183,
       "type": "multiple_choice",
-      "text": "Învățarea se produce de-a lungul intregii vieți. Rata achizițiilor:",
+      "text": "Învățarea se produce de-a lungul intregii vieți. Rata achizițiilor:\n\nOpțiuni:\na) crește odată cu maturizarea creierului\nb) scade odată cu maturizarea creierului.",
       "options": [
-        {
-          "letter": "a",
-          "text": "crește odată cu maturizarea creierului;"
-        },
-        {
-          "letter": "b",
-          "text": "scade odată cu maturizarea creierului"
-        },
         {
           "letter": "a",
           "text": "a"
@@ -20711,8 +20731,24 @@
       "chapter": 5,
       "number": 184,
       "type": "multiple_choice",
-      "text": "Leziunile lobului frontal produc:\n\nOpțiuni:\na) dezorientări spatíale\nb) comportamente nestăpânite\nc) emotivitate scazută\nd) probleme de gândire si dificultăți de planificare",
+      "text": "Leziunile lobului frontal produc:",
       "options": [
+        {
+          "letter": "a",
+          "text": "dezorientări spatíale"
+        },
+        {
+          "letter": "b",
+          "text": "comportamente nestăpânite"
+        },
+        {
+          "letter": "c",
+          "text": "emotivitate scazută"
+        },
+        {
+          "letter": "d",
+          "text": "probleme de gândire si dificultăți de planificare"
+        },
         {
           "letter": "e",
           "text": "a+b+c+d"
@@ -20737,8 +20773,20 @@
       "chapter": 5,
       "number": 185,
       "type": "multiple_choice",
-      "text": "Conexiunile nervoase ce stau la baza minții omenești sunt create de:\n\nOpțiuni:\na) interacțiunile celulelor nediferențiate\nb) interacțiunile celulelor diferențiate\nc) interacțiunile umane",
+      "text": "Conexiunile nervoase ce stau la baza minții omenești sunt create de:",
       "options": [
+        {
+          "letter": "a",
+          "text": "interacțiunile celulelor nediferențiate"
+        },
+        {
+          "letter": "b",
+          "text": "interacțiunile celulelor diferențiate"
+        },
+        {
+          "letter": "c",
+          "text": "interacțiunile umane"
+        },
         {
           "letter": "d",
           "text": "a+b"
@@ -20799,8 +20847,20 @@
       "chapter": 5,
       "number": 188,
       "type": "multiple_choice",
-      "text": "Zâmbetul si gânguritul la 2-3 luni sunt:\n\nOpțiuni:\na) controlate\nb) necontrolate\nc) apar automat in prezența celui care îl îngrijește",
+      "text": "Zâmbetul si gânguritul la 2-3 luni sunt:",
       "options": [
+        {
+          "letter": "a",
+          "text": "controlate"
+        },
+        {
+          "letter": "b",
+          "text": "necontrolate"
+        },
+        {
+          "letter": "c",
+          "text": "apar automat in prezența celui care îl îngrijește"
+        },
         {
           "letter": "d",
           "text": "a+c"

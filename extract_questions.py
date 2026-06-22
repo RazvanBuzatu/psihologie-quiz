@@ -202,6 +202,11 @@ def parse_questions(text):
                         current_opt['text'] += f'\n{qnum}. {qtext}'
                     else:
                         current_q['text'] += f'\n{qnum}. {qtext}'
+                        # Track small sequential numbered items (1., 2., 3., ...)
+                        # so we can rebuild options from them if the lettered
+                        # options turn out to be malformed in the source.
+                        if qnum <= 9:
+                            current_q['numbered_subs'].append(qtext)
                 continue
 
             # Genuine new question
@@ -210,6 +215,7 @@ def parse_questions(text):
                 'number': qnum,
                 'text': qtext,
                 'options': [],
+                'numbered_subs': [],
             }
             max_q_seen = qnum
             continue
@@ -226,72 +232,126 @@ def parse_questions(text):
 
 # ─── Post-processing ──────────────────────────────────────────────────────
 
-def has_combo(text):
-    """True if text is a letter-combination answer like 'a+b', 'a+b+c+d'."""
-    t = text.strip()
-    return bool(re.match(r'^[a-e](\+[a-e])+', t))
+def split_inline_options(options):
+    """
+    Some questions print their options inline on a single line, e.g.
+    "a. colectiv b. individual" or "a. x ; b. y ; c. z". The line parser
+    captures all of that as one option (letter 'a'). Split such an option
+    into its constituent options.
+
+    Only splits when the next sequential letter (b, c, ...) is NOT already
+    present as a separately-parsed option, so correctly-separated options
+    are never touched.
+    """
+    existing = {o['letter'].lower() for o in options}
+    result = []
+    for opt in options:
+        segments = [(opt['letter'].lower(), opt['text'])]
+        while True:
+            last_letter, last_text = segments[-1]
+            nxt = chr(ord(last_letter) + 1)
+            if nxt in existing:
+                break
+            m = re.search(r'\s' + nxt + r'[.)]\s+', last_text)
+            if not m:
+                break
+            before = last_text[:m.start()].strip().strip(';').strip()
+            after  = last_text[m.end():].strip()
+            segments[-1] = (last_letter, before)
+            segments.append((nxt, after))
+            existing.add(nxt)
+        for letter, txt in segments:
+            result.append({'letter': letter, 'text': txt.strip().strip(';').strip()})
+    return result
+
+
+def find_reset_index(options):
+    """
+    Return the index where the option-letter sequence restarts (e.g. the
+    second 'a' in a 'a b c d e / a b c d e' two-list combo question), or None.
+    A reset means the source listed the statements first and the lettered
+    answer choices (combinations) second — only then do we treat the first
+    block as context.
+    """
+    for i in range(1, len(options)):
+        if options[i]['letter'].lower() < options[i - 1]['letter'].lower():
+            return i
+    return None
+
 
 def finalize_question(q, answers, chapter_id, has_tf, tf_count):
+    """Returns (question_dict | None, status). status is None when OK, or a
+    short reason string ('no_answer' / 'no_options' / 'invalid_answer')."""
     num     = q['number']
-    options = q['options']
-
-    # ── Determine question type ────────────────────────────────────────
-    if has_tf and num <= tf_count:
-        qtype      = 'true_false'
-        clean_opts = []
-    else:
-        combo_opts = [o for o in options if has_combo(o['text'])]
-        plain_opts = [o for o in options if not has_combo(o['text'])]
-
-        if combo_opts:
-            # Move plain descriptive items into question text as context
-            if plain_opts:
-                ctx = '\n'.join(f"{o['letter']}) {o['text']}" for o in plain_opts)
-                q['text'] += '\n\nOpțiuni:\n' + ctx
-            clean_opts = combo_opts
-            qtype = 'multiple_choice'
-        elif plain_opts:
-            clean_opts = plain_opts
-            qtype = 'multiple_choice'
-        else:
-            qtype      = 'true_false'   # no options → probably a missed T/F
-            clean_opts = []
-
-    # ── Resolve answer ─────────────────────────────────────────────────
     raw_ans = answers.get(num)
     if raw_ans is None:
-        return None  # no answer found – skip
+        return None, 'no_answer'
 
-    if qtype == 'true_false':
-        answer     = raw_ans          # 'T' or 'F'
-        final_opts = []
-    elif ',' in raw_ans:
-        qtype      = 'multi_select'
-        answer     = [x.strip().lower() for x in raw_ans.split(',')]
-        final_opts = [
-            {'letter': o['letter'], 'text': o['text'].rstrip('.')}
-            for o in clean_opts
-        ]
+    options = split_inline_options(q['options'])
+
+    # ── True / False ───────────────────────────────────────────────────
+    if (has_tf and num <= tf_count) or (not options and raw_ans in ('T', 'F')):
+        return {
+            'id': f"ch{chapter_id}_{num}", 'chapter': chapter_id, 'number': num,
+            'type': 'true_false', 'text': q['text'].strip(), 'options': [],
+            'answer': raw_ans,
+        }, None
+
+    if not options:
+        return None, 'no_options'
+
+    text = q['text']
+
+    # ── Two-list combo format: statements first, lettered answers second.
+    #    Only when the letters actually restart. Otherwise keep ALL options
+    #    selectable (continuous lettering like a,b,c,d + combo e).
+    reset = find_reset_index(options)
+    if reset is not None:
+        context_opts = options[:reset]
+        sel_opts     = options[reset:]
+        ctx = '\n'.join(f"{o['letter']}) {o['text']}" for o in context_opts)
+        text = text + '\n\nOpțiuni:\n' + ctx
     else:
-        answer     = raw_ans.lower()  # 'a', 'b', …
-        final_opts = [
-            {'letter': o['letter'], 'text': o['text'].rstrip('.')}
-            for o in clean_opts
-        ]
+        sel_opts = options
 
-    # Skip questions that have no usable options (except T/F)
-    if qtype != 'true_false' and not final_opts:
-        return None
+    is_multi    = ',' in raw_ans
+    ans_letters = [a.strip().lower() for a in raw_ans.split(',')] if is_multi else [raw_ans.lower()]
 
+    # ── Salvage source-malformed questions: if the answer letter doesn't
+    #    correspond to any option but the question carries numbered items,
+    #    rebuild the options from those items (a=1, b=2, c=3, ...).
+    sel_letters = {o['letter'].lower() for o in sel_opts}
+    if not all(a in sel_letters for a in ans_letters) and q.get('numbered_subs'):
+        subs = q['numbered_subs']
+        sel_opts = [{'letter': chr(ord('a') + i), 'text': s} for i, s in enumerate(subs)]
+        # Drop the numbered items from the displayed text (they're now options)
+        text = '\n'.join(l for l in text.split('\n') if not re.match(r'^\d+\.\s', l.strip()))
+
+    final_opts = [{'letter': o['letter'].lower(), 'text': o['text'].rstrip('.').strip()}
+                  for o in sel_opts]
+
+    # Readability: when options are bare numbers ("1", "2", "3") that point at
+    # the numbered statements in the stem, swap in the statement text so each
+    # option reads on its own, and drop the now-redundant list from the stem.
+    if (q.get('numbered_subs') and final_opts and
+            all(re.fullmatch(r'\d+', o['text']) for o in final_opts)):
+        subs = q['numbered_subs']
+        nums = [int(o['text']) for o in final_opts]
+        if max(nums) <= len(subs):
+            for o in final_opts:
+                o['text'] = subs[int(o['text']) - 1].rstrip('.').strip()
+            text = '\n'.join(l for l in text.split('\n') if not re.match(r'^\d+\.\s', l.strip()))
+
+    final_letters = {o['letter'] for o in final_opts}
+
+    qtype  = 'multi_select' if is_multi else 'multiple_choice'
+    answer = ans_letters if is_multi else ans_letters[0]
+
+    status = None if all(a in final_letters for a in ans_letters) else 'invalid_answer'
     return {
-        'id':      f"ch{chapter_id}_{num}",
-        'chapter': chapter_id,
-        'number':  num,
-        'type':    qtype,
-        'text':    q['text'].strip(),
-        'options': final_opts,
-        'answer':  answer,
-    }
+        'id': f"ch{chapter_id}_{num}", 'chapter': chapter_id, 'number': num,
+        'type': qtype, 'text': text.strip(), 'options': final_opts, 'answer': answer,
+    }, status
 
 # ─── Main ─────────────────────────────────────────────────────────────────
 
@@ -316,21 +376,41 @@ def main():
 
         ch_questions = []
         skipped = 0
+        invalid = []
         for rq in raw_qs:
-            fq = finalize_question(rq, answers, ch['id'], ch['has_tf'], ch['tf_count'])
-            if fq:
-                ch_questions.append(fq)
-            else:
+            fq, status = finalize_question(rq, answers, ch['id'], ch['has_tf'], ch['tf_count'])
+            if fq is None:
                 skipped += 1
+                continue
+            if status == 'invalid_answer':
+                invalid.append(fq)
+            ch_questions.append(fq)
 
         types = {}
         for q in ch_questions:
             types[q['type']] = types.get(q['type'], 0) + 1
 
         print(f"  Finalized: {len(ch_questions)}  skipped: {skipped}  types: {types}")
+        if invalid:
+            print(f"  ⚠️  STILL UNANSWERABLE: {len(invalid)}")
+            for q in invalid:
+                print(f"       #{q['number']} ans={q['answer']} opts={[o['letter'] for o in q['options']]}")
         all_questions.extend(ch_questions)
 
+    # Final integrity check across the whole set
+    bad = []
+    for q in all_questions:
+        if q['type'] == 'true_false':
+            continue
+        letters = {o['letter'].lower() for o in q['options']}
+        ans = q['answer'] if isinstance(q['answer'], list) else [q['answer']]
+        if not all(a.lower() in letters for a in ans):
+            bad.append(q['id'])
+
     print(f"\nTotal questions: {len(all_questions)}")
+    print(f"Integrity check — unanswerable questions remaining: {len(bad)}")
+    if bad:
+        print(f"  {bad}")
 
     output = {
         "chapters": [
