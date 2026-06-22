@@ -242,7 +242,8 @@ p  { line-height: 1.55; color: var(--text-soft); }
 }
 .text-link.danger { color: var(--error-text); }
 
-.credit { text-align: center; color: var(--muted); font-size: .72rem; margin-top: 22px; }
+.credit { text-align: center; color: var(--muted); font-size: .72rem; margin-top: 22px; line-height: 1.7; }
+.version { font-size: .68rem; opacity: .7; }
 
 /* ── Quiz header ── */
 .quiz-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; padding-top: 4px; }

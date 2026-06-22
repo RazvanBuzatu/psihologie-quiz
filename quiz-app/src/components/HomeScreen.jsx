@@ -168,6 +168,8 @@ export default function HomeScreen({
 
       <p className="credit">
         Facultatea de Psihologie și Științele Educației Brașov · 2026
+        <br />
+        <span className="version">v{__APP_VERSION__} · actualizat {__BUILD_TIME__}</span>
       </p>
     </div>
   )
